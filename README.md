@@ -1,22 +1,30 @@
 Sistema de Atendimento Inteligente para Clínicas
-Este projeto é uma aplicação web completa para agendamento de consultas. Possui um backend em Node.js para a API e um frontend em Vue.js para a interface do usuário.
 
-Funcionalidades
-Cadastro e Login de usuários (pacientes e secretários) com autenticação JWT.
+Um projeto de aplicação web full-stack para gerenciamento de agendamentos em clínicas médicas, com autenticação de usuários e integração com APIs externas para consulta de CEP e clima.
 
-Criação de agendamentos com verificação de horário.
 
-Consulta automática de endereço por CEP (API ViaCEP).
+-------------------------------------------------------------------
 
-Painel para visualização de todas as consultas.
+Tecnologias Utilizadas
 
-Tecnologias
-Backend: Node.js, Express, MongoDB, Mongoose, JWT.
+Backend: Node.js, Express.js, MongoDB, Mongoose, JWT, Bcrypt.
 
-Frontend: Vue.js 3, Vue Router, Axios.
+Frontend: Vue.js 3, Vue Router, Axios, Pinia.
 
-Como Executar Localmente
-Pré-requisitos: Node.js, npm, Vue CLI e MongoDB.
+
+--------------------------------------------------------------------
+
+Como Rodar o Projeto Localmente:
+
+Pré-requisitos
+Node.js e npm
+
+Vue CLI (npm install -g @vue/cli)
+
+MongoDB
+
+
+--------------------------------------------------------------------
 
 1. Backend
 Abra um terminal na pasta backend/:
@@ -24,9 +32,8 @@ Abra um terminal na pasta backend/:
 # Instalar dependências
 npm install
 
-# Crie o arquivo .env e adicione suas chaves:
-# MONGODB_URI=mongodb://127.0.0.1:27017/clinica
-# JWT_SECRET=sua_chave_secreta
+# Criar e configurar o arquivo .env com suas chaves
+# (MONGODB_URI, JWT_SECRET, OPENWEATHER_KEY)
 
 # Iniciar o servidor
 npm run dev
@@ -43,14 +50,3 @@ npm install
 npm run serve
 
 A aplicação estará acessível em http://localhost:8080.
-
-Links do Deploy
-A aplicação foi publicada e está totalmente funcional nos seguintes links:
-
-Frontend (Vercel): https://clinica-inteligente.vercel.app/
-
-Interface principal onde o usuário interage com o sistema.
-
-Backend/API (Render): https://api-clinica-inteligente.onrender.com/
-
-Servidor que gerencia os dados e a lógica de negócio.
